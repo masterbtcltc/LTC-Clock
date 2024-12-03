@@ -26,7 +26,12 @@ async function fetchLTCPrice() {
         priceElement.style.color = "yellow"; // Price went up
       } else if (ltcPrice < lastPrice) {
         priceElement.style.color = "blue"; // Price went down
+      } else {
+        priceElement.style.color = "white"; // Price stayed the same
       }
+    } else {
+      // Default color when first loading
+      priceElement.style.color = "white";
     }
 
     // Update the last price
@@ -38,6 +43,7 @@ async function fetchLTCPrice() {
     // Display an error message
     const priceElement = document.getElementById("price");
     priceElement.textContent = "Error";
+    priceElement.style.color = "red"; // Error message in red
   }
 }
 
