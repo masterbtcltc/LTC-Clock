@@ -23,9 +23,9 @@ async function fetchLTCPrice() {
     // If there's a previous price, compare it to the current price and update the color
     if (lastPrice !== null) {
       if (ltcPrice > lastPrice) {
-        priceElement.style.color = "green"; // Price went up
+        priceElement.style.color = "yellow"; // Price went up
       } else if (ltcPrice < lastPrice) {
-        priceElement.style.color = "red"; // Price went down
+        priceElement.style.color = "blue"; // Price went down
       }
     }
 
