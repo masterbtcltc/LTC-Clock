@@ -9,7 +9,7 @@ async function fetchLTCPrice() {
     // Get the LTC price from the API response
     const ltcPrice = data.data.amount;
 
-    // Update the price on the page
+    // Update the price on the page without the $ sign
     const priceElement = document.getElementById("price");
     priceElement.textContent = parseFloat(ltcPrice).toLocaleString("en-US", { 
       minimumFractionDigits: 2, 
