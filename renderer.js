@@ -45,8 +45,8 @@ async function fetchLTCPrice() {
   }
 }
 
-// Refresh the price every 10 seconds
-setInterval(fetchLTCPrice, 10000);
+// Refresh the price every 1 seconds
+setInterval(fetchLTCPrice, 1000);
 
 // Fetch the price immediately when the page loads
 fetchLTCPrice();
