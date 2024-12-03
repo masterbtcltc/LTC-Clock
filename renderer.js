@@ -11,7 +11,7 @@ async function fetchLTCPrice() {
 
     // Update the price on the page
     const priceElement = document.getElementById("price");
-    priceElement.textContent = `$${parseFloat(ltcPrice).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    priceElement.textContent = `${parseFloat(ltcPrice).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
   } catch (error) {
     console.error("Error fetching LTC price:", error);
 
