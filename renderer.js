@@ -26,12 +26,10 @@ async function fetchLTCPrice() {
         priceElement.style.color = "yellow"; // Price went up
       } else if (ltcPrice < lastPrice) {
         priceElement.style.color = "blue"; // Price went down
-      } else {
-        priceElement.style.color = "white"; // Price stayed the same
       }
     } else {
-      // Default color when first loading
-      priceElement.style.color = "white";
+      // Default color when first loading (set to blue or yellow based on the price change)
+      priceElement.style.color = "blue"; // You can change this to yellow if you prefer
     }
 
     // Update the last price
